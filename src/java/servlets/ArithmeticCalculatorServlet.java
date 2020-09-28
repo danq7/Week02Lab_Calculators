@@ -45,8 +45,16 @@ public class ArithmeticCalculatorServlet extends HttpServlet {
             return;
         }
 
-        int parsedNum1 = Integer.parseInt(string1);
-        int parsedNum2 = Integer.parseInt(string2);
+        int parsedNum1 = 0;
+        int parsedNum2 = 0;
+
+        try {
+            parsedNum1 = Integer.parseInt(string1);
+            parsedNum2 = Integer.parseInt(string2);
+
+        } catch (Exception e) {
+            request.setAttribute("resultMessage", "invalid");
+        }
 
         if (request.getParameter("addition") != null) {
 
