@@ -8,13 +8,14 @@
     </head>
     <body>
         <h1>Age Calculator</h1>
-        <br>
-        <form method="post" action="">
-            <label>Enter your age: </label><input type="text" name="age_input" value="">
+        <form method="post">
+            <label>Enter your age: </label><input type="text" name="age_input" value="${currentAge}">
             <br>
-            <input type="button" name="next_bday" value="Age next birthday">
+            <input type="submit" name="next_bday" value="Age next birthday">
             <br>
-            <a href="">Arithmetic Calculator</a>
+            <span>${age_message}</span>
+            <br>
+            <a href="arithmetic">Arithmetic Calculator</a>
         </form>
     </body>
 </html>
